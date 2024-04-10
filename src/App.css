@@ -1,0 +1,294 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #2A3F5E;
+}
+
+.intro{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.introImg{
+  width: 30vw;
+  border: 3px solid white;
+  margin-left: 20px;
+  border-radius: 10%;
+}
+
+.introPara{
+  font-size: 20px;
+  padding: 40px 40px;
+  color: white;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  word-spacing: 5px;
+}
+
+
+.list .item:nth-child(odd){
+  margin-left: 2vw;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.list .item:nth-child(even){
+  margin-left: auto;
+  margin-right: 2vw;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.item img{
+  margin: 30px;
+  height: 150px;
+}
+
+.item{
+  width: 70vw;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 3px solid white;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: orange;
+}
+
+@keyframes desc {
+  0% {
+    max-height: 20px;
+  }
+  25%{
+    max-height: 40px;
+  }
+  50%{
+    max-height: 60px;
+  }
+  75%{
+    max-height: 80px;
+  }
+  100% {
+    max-height: 100px;
+  }
+}
+
+.item div {
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 20px;
+  transition: max-height 2s ease;
+}
+
+.item div:hover {
+  max-height: 200px;
+}
+
+.youtube iframe{
+  width: 1440px;
+  height: 810px;
+  margin: 30px;
+}
+
+.youtube{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project iframe{
+  width: 720px;
+  height: 405px;
+  margin: 10px;
+}
+
+.step *{
+  color: white;
+}
+
+.subtitle{
+  background-color: white;
+  color: red;
+  width:fit-content;
+  border-radius: 20px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  border: 3px solid white;
+}
+
+li {
+  list-style-type: none;
+  font-size: 25px;
+  padding: 10px;
+  position: relative;
+  right: 10px;
+  margin-top: 0;
+}
+
+.documentation{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 30px 0;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.document{
+  text-decoration: none;
+  color: red;
+  font-size: 20px;
+  padding: 10px;
+  display: block;
+}
+
+.document:hover{
+  color: white;
+  background-color: #ff4040;
+}
+
+.navLogo{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.navLogo img{
+  width: 50px;
+  margin: 10px;
+}
+
+.navbar .btn{
+  position: absolute;
+  height: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding-bottom: 0;
+  font-size: 20px;
+  top: 0;
+  right: 20px;
+  margin: 15px;
+  border: 3px solid white;
+}
+
+.navLogo a{
+  font-size: 20px;
+  color: white;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.navbar .btn:hover{
+  background-color: black;
+  border: 3px solid white;
+  color: white;
+}
+
+.heading{
+  text-align: center;
+  background-color: black;
+  font-size: 30px;
+  color: white;
+  position: relative;
+  top: -80px;
+  z-index: -1;
+  height: 80px;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 20px;
+  margin-top: 0;
+}
+
+.navbar{
+  height: 80px;
+}
+
+.demoTitle{
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+}
+
+form div span{
+
+}
+
+form *{
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+}
+
+form div input{
+  width: 20vw;
+  margin-bottom: 20px;
+}
+
+form button{
+  width: 25vw;
+  background-color: red;
+  color: white;
+  border: 3px solid red;
+  margin: 20px;
+  padding: 10px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form button:hover{
+  background-color: white;
+  color: red;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  padding: 20px;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.demo{
+  display: flex;
+  border: 3px solid white;
+  background-color: white;
+  width: 50vw;
+  height: 50vh;
+  margin: 18vh 25vw;
+  box-sizing: border-box;
+}
+
+.demo .book{
+  background-color: rgb(214, 214, 214);
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
