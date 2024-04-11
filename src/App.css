@@ -236,10 +236,6 @@ li {
   text-decoration: none;
 }
 
-form div span{
-
-}
-
 form *{
   font-size: 20px;
   color: red;
@@ -291,4 +287,13 @@ form{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.donate{
+  width: 30vw;
+  height: 60vh;
+  background-color: white;
+  margin: 10vh 0vw 0vh 35vw;
+  padding-top: 15vh;
+  box-sizing: border-box;
 }
