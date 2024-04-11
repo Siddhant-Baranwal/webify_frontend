@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import axios from 'axios';
 
 const Demo = () => {
+  const BACKEND_URL = "https://webify-backend-hnli.onrender.com/";
   document.body.style.backgroundColor = "#ff4040";
   const submitHandler = (event) => {
     event.preventDefault();
@@ -10,9 +11,9 @@ const Demo = () => {
     const phone = event.target.phone.value;
     console.log(name)
     console.log(phone)
-    axios.post("https://webify-backend-hnli.onrender.com", {
+    axios.post(`${BACKEND_URL}/demo`, {
       name, phone
-    })
+    }) 
     .then((response) => {
       console.log(response);
       event.target.reset();
