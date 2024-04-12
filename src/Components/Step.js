@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Step = () => {
@@ -87,6 +87,7 @@ const Step = () => {
     return (
       <iframe key={index}
         src={item}
+        className="learn"
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -109,7 +110,7 @@ const Step = () => {
   const documentation = docs[id - 1].map((item, index) => {
     return (
       <div key={index}>
-        <a href={item} className="document">Click me to get the documentation for {title[id-1][index]}</a>
+        <Link to={item} className="document">&#10239; Click me to get the documentation for {title[id-1][index]}</Link>
       </div>
     );
   });
@@ -139,6 +140,7 @@ const Step = () => {
     return (
         <iframe key={index}
         src={item}
+        className="project"
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -151,15 +153,13 @@ const Step = () => {
   return (
     <div className="step">
       <Navbar title={head[id-1]}/>
-      <ul className="stepList">{introduction}</ul>
-      <h1 className="learn subtitle">Learn from here: </h1>
+      <ul className="steplist">{introduction}</ul>
+      <h1 className="learnlist subtitle">Learn from here: </h1>
       <div className="youtube">{youTubeVideo}</div>
-      <div className="documentation">
-        <h1 className="doc subtitle">Documentation: </h1>
-        {documentation}
-      </div>
+      <h1 className="subtitle">Documentation: </h1>
+      <div className="doc">{documentation}</div>
       {proj[id-1].length!==0 && (<h1 className="proj subtitle">Practice by making these projects: </h1>)}
-      <div className="project">{projects}</div>
+      <div className="projectlist">{projects}</div>
     </div>
   );
 };

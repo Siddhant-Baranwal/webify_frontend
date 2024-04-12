@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = (props) => {
   return (
     <div className='navbar'>
       <span className="heading">{props.title}</span>
       <span className="navlogo">
-        <a href="/">Webify</a>
-        <a href='/donate'>Donate</a>
-        <a href='/demo'>Booking</a>
+        <Link className="pages" to="/">Webify</Link>
+        <Link className="pages" to='/donate'>Donate</Link>
+        <Link className="pages" to='/demo'>Booking</Link>
       </span>
     </div>
   )

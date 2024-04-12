@@ -22,9 +22,7 @@ const Demo = () => {
     <>
     <Navbar title = "Learn full-stack web development"/>
     <div>
-      {/* <div className="book">
-        <img src="otherImages/demo.png" alt="Book a demo class Now!" />
-      </div> */}
+      <h1 className='bookhead' >Book a free counselling session now!</h1>
       <form className='form' onSubmit={submitHandler}>
         <div>
         <span>Name: </span>

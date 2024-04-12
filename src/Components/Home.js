@@ -37,13 +37,13 @@ const Home = () => {
     <div>
       <Navbar title = "Learn full-stack web development"/>
       <div className="intro">
-      <img src="otherImages/introImg.avif" className='introImg' alt="Web Development" />
+      <img src="otherImages/introImg.png" className='introImg' alt="Web Development" />
       <p className='introPara'>Welcome to our beginner-friendly guide to web development! Whether you're just starting your journey into the world of coding or looking to expand your skills, this website is designed to be your go-to resource. From understanding the basics of HTML, CSS, and JavaScript to exploring advanced frameworks and tools, we're here to provide you with clear explanations, practical examples, and step-by-step tutorials. Our goal is to empower you to create stunning websites and web applications, equipping you with the knowledge and tools you need to succeed in the dynamic field of web development. Let's dive in and start building together!</p>
       </div>
       <div className="list">
         {desc}
       </div>
-      <a href='/demo' className='demoTitle'>Book a free counselling class</a>
+      <Link to='/demo' className='demoTitle'>Book a free counselling class</Link>
     </div>
   )
 }
