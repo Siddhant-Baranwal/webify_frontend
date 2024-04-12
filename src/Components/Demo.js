@@ -20,9 +20,8 @@ const Demo = () => {
   }
   return (
     <>
-    <Navbar title = "Learn full-stack web development"/>
+    <Navbar title = "Book a free counselling session now!"/>
     <div>
-      <h1 className='bookhead' >Book a free counselling session now!</h1>
       <form className='form' onSubmit={submitHandler}>
         <div>
         <span>Name: </span>

@@ -21,11 +21,12 @@ body{
   padding: 0vw 0vw 1vw 0vw; 
 }
 
-.navbar .heading, .navbar .navlogo a{
+.pages{
   color: #66FCF1;
   font-family:monospace;
   font-size: 1.75vw;
   padding: 1vw;
+  width: 10vw;
   text-align: center;
   align-items: center;
   background-image: linear-gradient(to right, rgba(102, 252, 241, 0), rgba(102, 252, 241, 0));
@@ -33,22 +34,13 @@ body{
   font-weight: bold;
 }
 
-.navbar .navlogo a{
-  padding-top: 3vw;
-}
-
-.navbar .heading{
-  width: 35vw;
-  padding-left: 0vw !important;
-}
-
-.navbar .heading:hover{
-  background-image: linear-gradient(to right, rgba(102, 252, 241, 0.2), rgba(102, 252, 241, 1));
+.navbar .navlogo .pages:hover{
+  background-image: linear-gradient(to left, rgba(102, 252, 241, 0.2), rgba(102, 252, 241, 1));
   color: #1F2833;
 }
 
-.navbar .navlogo a:hover{
-  background-image: linear-gradient(to left, rgba(102, 252, 241, 0.2), rgba(102, 252, 241, 1));
+.navbar .pages:hover{
+  background-image: linear-gradient(to right, rgba(102, 252, 241, 0.2), rgba(102, 252, 241, 1));
   color: #1F2833;
 }
 
@@ -146,6 +138,10 @@ body{
   background-color: #66FCF1;
   color: #1F2833;
   margin: 2vw 0 1vw 0;
+}
+
+.bookhead{
+  margin-top: 0vw !important;
 }
 
 .step .document{
