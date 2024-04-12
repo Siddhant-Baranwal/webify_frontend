@@ -4,7 +4,6 @@ import axios from 'axios';
 
 const Demo = () => {
   const BACKEND_URL = "https://webify-backend-hnli.onrender.com";
-  document.body.style.backgroundColor = "#ff4040";
   const submitHandler = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
@@ -22,11 +21,11 @@ const Demo = () => {
   return (
     <>
     <Navbar title = "Learn full-stack web development"/>
-    <div className='demo'>
-      <div className="book">
-        <img src="demo.png" alt="Book a demo class Now!" />
-      </div>
-      <form onSubmit={submitHandler}>
+    <div>
+      {/* <div className="book">
+        <img src="otherImages/demo.png" alt="Book a demo class Now!" />
+      </div> */}
+      <form className='form' onSubmit={submitHandler}>
         <div>
         <span>Name: </span>
         <input type="text" name="name" id="name" />

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 
 const Home = () => {
-  document.body.style.backgroundColor = "#2A3F5E";
   const description = [
     'HTML structures web pages, CSS styles them, controlling layout and appearance. JavaScript adds interactivity, dynamic content, and enhances user experience with animations and form validation. Together, HTML, CSS, and JavaScript form the core technologies for building modern, interactive, and visually appealing websites.',
     'Git, a version control system, tracks code changes in software development, facilitating collaboration and history tracking. GitHub, a web-based platform, hosts Git repositories, offering collaboration tools like issue tracking and pull requests. It centralizes open-source projects, fostering a global developer community for sharing and contributing to code.',
@@ -38,7 +37,7 @@ const Home = () => {
     <div>
       <Navbar title = "Learn full-stack web development"/>
       <div className="intro">
-      <img src="introImg.avif" className='introImg' alt="Web Development" />
+      <img src="otherImages/introImg.avif" className='introImg' alt="Web Development" />
       <p className='introPara'>Welcome to our beginner-friendly guide to web development! Whether you're just starting your journey into the world of coding or looking to expand your skills, this website is designed to be your go-to resource. From understanding the basics of HTML, CSS, and JavaScript to exploring advanced frameworks and tools, we're here to provide you with clear explanations, practical examples, and step-by-step tutorials. Our goal is to empower you to create stunning websites and web applications, equipping you with the knowledge and tools you need to succeed in the dynamic field of web development. Let's dive in and start building together!</p>
       </div>
       <div className="list">

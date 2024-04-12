@@ -3,12 +3,12 @@ import React from 'react'
 const Navbar = (props) => {
   return (
     <div className='navbar'>
-      <div className="navLogo">
-        <a href="/"><img src="logo.png" alt="Webify"/></a>
-        <a href="/"><p>Webify</p></a>
-      </div>
-      <p className="heading">{props.title}</p>
-      <a className='btn' href='/donate'>Donate</a>
+      <span className="heading">{props.title}</span>
+      <span className="navlogo">
+        <a href="/">Webify</a>
+        <a href='/donate'>Donate</a>
+        <a href='/demo'>Booking</a>
+      </span>
     </div>
   )
 }

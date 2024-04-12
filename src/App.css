@@ -1,299 +1,113 @@
 body{
+  background: url('../public/otherImages/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #2A3F5E;
+  color: #66FCF1;
 }
 
-.intro{
-  display: flex;
-  flex-direction: row;
-  margin-top: 5vh;
-  align-items: center;
-  justify-content: center;
-}
-
-.introImg{
-  width: 30vw;
-  border: 3px solid white;
-  margin-left: 20px;
-  border-radius: 10%;
-}
-
-.introPara{
-  font-size: 20px;
-  padding: 40px 40px;
-  color: white;
-  font-weight: 500;
-  line-height: 25px;
-  letter-spacing: 0.5px;
-  word-spacing: 5px;
-}
-
-
-.list .item:nth-child(odd){
-  margin-left: 2vw;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-}
-
-.list .item:nth-child(even){
-  margin-left: auto;
-  margin-right: 2vw;
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-}
-
-.item img{
-  margin: 30px;
-  height: 150px;
-}
-
-.item{
-  width: 70vw;
-  align-items: center;
+a{
   text-decoration: none;
-  color: black;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border: 3px solid white;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: orange;
-}
-
-@keyframes desc {
-  0% {
-    max-height: 20px;
-  }
-  25%{
-    max-height: 40px;
-  }
-  50%{
-    max-height: 60px;
-  }
-  75%{
-    max-height: 80px;
-  }
-  100% {
-    max-height: 100px;
-  }
-}
-
-.item div {
-  font-size: 20px;
-  font-weight: bold;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 20px;
-  transition: max-height 2s ease;
-}
-
-.item div:hover {
-  max-height: 200px;
-}
-
-.youtube iframe{
-  width: 1440px;
-  height: 810px;
-  margin: 30px;
-}
-
-.youtube{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.project iframe{
-  width: 720px;
-  height: 405px;
-  margin: 10px;
-}
-
-.step *{
-  color: white;
-}
-
-.subtitle{
-  background-color: white;
-  color: red;
-  width:fit-content;
-  border-radius: 20px;
-  margin: auto;
-  text-align: center;
-  padding: 20px;
-  border: 3px solid white;
-}
-
-li {
-  list-style-type: none;
-  font-size: 25px;
-  padding: 10px;
-  position: relative;
-  right: 10px;
-  margin-top: 0;
-}
-
-.documentation{
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  margin: 30px 0;
-  padding: 20px;
-  padding-top: 0;
-}
-
-.document{
-  text-decoration: none;
-  color: red;
-  font-size: 20px;
-  padding: 10px;
-  display: block;
-}
-
-.document:hover{
-  color: white;
-  background-color: #ff4040;
-}
-
-.navLogo{
-  display: flex;
-  flex-direction: row;
-  color: white;
-  height: 80px;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  box-sizing: border-box;
-}
-
-.navLogo img{
-  width: 50px;
-  margin: 10px;
-}
-
-.navbar .btn{
-  position: absolute;
-  height: 50px;
-  padding: 10px;
-  box-sizing: border-box;
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
-  color: black;
-  background-color: white;
-  padding-bottom: 0;
-  font-size: 20px;
-  top: 0;
-  right: 20px;
-  margin: 15px;
-  border: 3px solid white;
-}
-
-.navLogo a{
-  font-size: 20px;
-  color: white;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-
-.navbar .btn:hover{
-  background-color: black;
-  border: 3px solid white;
-  color: white;
-}
-
-.heading{
-  text-align: center;
-  background-color: black;
-  font-size: 30px;
-  color: white;
-  position: relative;
-  top: -80px;
-  z-index: -1;
-  height: 80px;
-  box-sizing: border-box;
-  align-items: center;
-  padding: 20px;
-  margin-top: 0;
 }
 
 .navbar{
-  height: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  padding: 0vw 0vw 1vw 0vw; 
 }
 
-.demoTitle{
-  background-color: black;
-  color: white;
-  padding: 20px;
-  font-size: 25px;
+.navbar .heading, .navbar .navlogo a{
+  color: #66FCF1;
+  font-family:monospace;
+  font-size: 1.75vw;
+  padding: 1vw;
   text-align: center;
-  font-weight: bold;
-  display: block;
-  text-decoration: none;
-}
-
-form *{
-  font-size: 20px;
-  color: red;
+  align-items: center;
+  transition: 1s;
   font-weight: bold;
 }
 
-form div input{
-  width: 20vw;
-  margin-bottom: 20px;
+.navbar .navlogo a{
+  padding-top: 3vw;
 }
 
-form button{
-  width: 25vw;
-  background-color: red;
+.navbar .heading{
+  width: 35vw;
+  padding-left: 0vw !important;
+}
+
+.navbar .heading:hover, .navbar .navlogo a:hover{
+  background-image: linear-gradient(to right, rgba(102, 252, 241, 0.2), rgba(102, 252, 241, 1));
+  color: #1F2833;
+}
+
+.navbar .navlogo{
+  margin: 1vw;
+  text-align: right;
+}
+
+.payhead{
+  width: 100vw;
+  height: 10vw;
+  margin: 10vw 0vw;
   color: white;
-  border: 3px solid red;
-  margin: 20px;
-  padding: 10px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding: 3vw 0vw;
+  text-align: center;
+  background-color: rgb(83, 200, 83);
 }
 
-form button:hover{
-  background-color: white;
-  color: red;
-}
-
-form{
+.form{
   display: flex;
   flex-direction: column;
-  width: 30vw;
-  padding: 20px;
-  align-items: center;
-  padding-top: 50px;
+  height: 24vw;
+  width: 40vw;
+  margin: 6vw 30vw;
+  padding: 2vw;
 }
 
-.demo{
-  display: flex;
-  border: 3px solid white;
-  background-color: white;
-  width: 50vw;
-  height: 50vh;
-  margin: 18vh 25vw;
-  box-sizing: border-box;
+.form button{
+  background-color: #66FCF1;
+  color: #1F2833;
+  font-size: 1.25vw;
+  border: 2px solid #66FCF1;
+  margin-top: 2vw;
+  font-weight: bold;
+  margin-left: 12vw;
+  width: 10vw;
+  padding: 0.5vw;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transition: 0.5s;
 }
 
-.demo .book{
-  background-color: rgb(214, 214, 214);
-  width: 20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.form button:hover{
+  background-color: #1F2833;
+  color: #66FCF1;
+  border: 2px solid #66FCF1;
+  box-shadow: #66FCF1 0 0 3vw 0.2vw;
 }
 
-.donate{
-  width: 30vw;
-  height: 60vh;
-  background-color: white;
-  margin: 10vh 0vw 0vh 35vw;
-  padding-top: 15vh;
-  box-sizing: border-box;
+.form div{
+  margin: 1vw;
+}
+
+.form div span{
+  display: inline-block;
+  width: 7vw;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.5vw;
+}
+
+.form div input{
+  background-color: rgba(120, 120, 120, 0.1);
+  padding: 1vw;
+  border: 0;
+  border-bottom: 2px solid rgba(102, 252, 241, 0.5);
+  font-size: 1.5vw;
+  width: 25vw;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Step = () => {
-  document.body.style.backgroundColor = "#ff4040";
   let { id } = useParams();
   const head = [
     "HTML, CSS and JavaScript",

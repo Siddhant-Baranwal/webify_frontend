@@ -4,7 +4,6 @@ import axios from 'axios';
 
 const Donate = () => {
   const BACKEND_URL = "https://webify-backend-hnli.onrender.com";
-  document.body.style.backgroundColor = "#ff4040";
   const checkoutHandler = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -52,8 +51,8 @@ const Donate = () => {
   }
   return (
     <div>
-      <Navbar title = "Donate and help us grow!"/>
-      <form className='donate' onSubmit={checkoutHandler}>
+      <Navbar title = "Donate and help us grow faster!"/>
+      <form className='form' onSubmit={checkoutHandler}>
         <div>
         <span>Name: </span>
         <input type="text" name="name" id="name" />
