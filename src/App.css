@@ -74,7 +74,7 @@ body{
   font-size: 1.25vw;
   border: 0.1vw solid #66FCF1;
   margin-top: 2vw;
-  font-weight: bold;
+  font-weight: bolder;
   margin-left: 12vw;
   width: 10vw;
   padding: 0.5vw;
@@ -294,4 +294,10 @@ body{
 .up:hover{
   color: #1F2833;
   background-image: linear-gradient(to left, rgba(102, 252, 241, 0.2), rgba(102, 252, 241, 1));
+}
+
+.form button:disabled{
+  background-color: #89a4a2;
+  font-weight: 100;
+  color: grey;
 }
