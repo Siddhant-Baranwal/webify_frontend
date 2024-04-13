@@ -30,6 +30,7 @@ const Demo = () => {
     }) 
     .then((response) => {
       event.target.reset();
+      console.log(response);
     })
     .catch((error) => {
       console.log(error);
