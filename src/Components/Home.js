@@ -20,7 +20,6 @@ const Home = () => {
     };
     document.addEventListener("mousemove", parallax);
     
-    // Cleanup function to remove the event listener
     return () => {
       document.removeEventListener("mousemove", parallax);
     };
