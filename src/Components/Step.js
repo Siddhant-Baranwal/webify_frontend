@@ -160,6 +160,8 @@ const Step = () => {
       <div className="doc">{documentation}</div>
       {proj[id-1].length!==0 && (<h1 className="proj subtitle">Practice by making these projects: </h1>)}
       <div className="projectlist">{projects}</div>
+      {/* eslint-disable-next-line */}
+      <a href="#" className="up">&uArr;</a>
     </div>
   );
 };

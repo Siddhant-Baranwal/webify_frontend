@@ -1,7 +1,7 @@
 body{
   background: url('../public/otherImages/bg.jpg');
   background-repeat: no-repeat;
-  background-size: auto 500vh;
+  background-size: auto 1000vh;
   padding-bottom: 5vw;
 }
 
@@ -12,9 +12,6 @@ body{
   color: #66FCF1;
 }
 
-.pages{
-  text-decoration: none;
-}
 
 .navbar{
   display: grid;
@@ -23,6 +20,7 @@ body{
 }
 
 .pages{
+  text-decoration: none;
   color: #66FCF1;
   font-family:monospace;
   font-size: 1.75vw;
@@ -278,4 +276,22 @@ body{
   text-align: center;
   padding: 4vw 0vw 0vw 0vw;
   color: #66FCF1;
+}
+
+.up{
+  position: fixed;
+  bottom: 3vw;
+  right: 3vw;
+  padding: 0.5vw 1vw;
+  background-color: #1F2833;
+  color: #66FCF1;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 2vw;
+  border-radius: 1vw;
+}
+
+.up:hover{
+  color: #1F2833;
+  background-image: linear-gradient(to left, rgba(102, 252, 241, 0.2), rgba(102, 252, 241, 1));
 }
