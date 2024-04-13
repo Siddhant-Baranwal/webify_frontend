@@ -2,6 +2,7 @@ body{
   background: url('../public/otherImages/bg.jpg');
   background-repeat: no-repeat;
   background-size: auto 500vh;
+  padding-bottom: 5vw;
 }
 
 *{
@@ -69,7 +70,7 @@ body{
   padding: 2vw;
 }
 
-.form button{
+.form button, .demoTitle{
   background-color: #66FCF1;
   color: #1F2833;
   font-size: 1.25vw;
@@ -84,20 +85,17 @@ body{
 }
 
 .demoTitle{
-  background-color: #66FCF1;
-  color: #1F2833;
-  font-size: 1.25vw;
-  border: 0.1vw solid #66FCF1;
-  margin-top: 2vw;
-  font-weight: bold;
-  margin-left: 12vw;
-  width: 10vw;
-  padding: 0.5vw;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  transition: 0.5s;
+  margin: 4vw 34vw 0 34vw;
+  display: inline-block;
+  width: 30vw;
+  padding: 1vw;
+  font-size: 1.5vw;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 1vw;
 }
 
-.form button:hover{
+.form button:hover, .demoTitle:hover{
   background-color: #1F2833;
   color: #66FCF1;
   border: 0.1vw solid #66FCF1;
@@ -206,7 +204,78 @@ body{
   padding: 11vw;
   font-size: 5vw;
   font-family: cursive;
-  opacity: 0.5;
+  opacity: 0.7;
   letter-spacing: 0.5vw;
   font-weight: bold;
+}
+
+.intro{
+  display: flex;
+  flex-direction: row;
+  height: 16vw;
+}
+
+.intro img{
+  width: 30vw;
+  padding: 0;
+  filter: invert(100%);
+}
+
+.intro p{
+  font-size: 1.5vw;
+  margin: 7vw 2vw 0 0;
+  height: 1.75vw;
+  transition: 2s;
+  overflow: hidden;
+}
+
+.intro p::after {
+  content: "...";
+  position: absolute;
+  font-size: 2vw;
+  color: #66FCF1;
+  bottom: -5vw; 
+  right: 2vw; 
+  visibility: visible; 
+}
+
+.intro p:hover::after {
+  visibility: hidden;
+}
+
+.intro p:hover{
+  height: 15vw;
+  margin: 2vw 2vw 0 0 ;
+}
+
+.item{
+  display: block;
+  display: flex;
+  margin-bottom: 1vw;
+  background-color: #1F2833;
+  color: transparent;
+}
+
+.item:hover > .special{
+  color: white;
+}
+
+.item:hover{
+  background-color: #7f7f7f;
+}
+
+.item img{
+  display: inline-block;
+  height: 10vw;
+  margin: 1vw ;
+}
+
+.item div{
+  display: inline-block;
+  width: 80vw;
+  text-decoration: none;
+  font-size: 1.35vw;
+  text-align: center;
+  padding: 4vw 0vw 0vw 0vw;
+  color: #66FCF1;
 }

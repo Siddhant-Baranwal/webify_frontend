@@ -37,20 +37,22 @@ const Home = () => {
   ]
   const desc = description.map((item, index) => {
     return (
+      <div>
       <Link to={`/step/${index + 1}`} className="item" key={index}>
         {index % 2 === 0 && (
           <>
             <img src={`toolsImages/step${index + 1}.png`} alt={`Step${index + 1}`} />
-            <div>{item}</div>
+            <div className='special' >{item}</div>
           </>
         )}
         {index % 2 === 1 && (
           <>
-            <div>{item}</div>
+            <div className='special' >{item}</div>
             <img src={`toolsImages/step${index + 1}.png`} alt="Step1" />
           </>
         )}
       </Link>
+      </div>
     );
   });
   
@@ -60,11 +62,12 @@ const Home = () => {
     <div>
       <Navbar title = "Learn full-stack web development"/>
       <div id="parallax"><h1>Webify</h1></div>
-      <h1 className="bookhead">Getting started!</h1>
+      <h1 className="bookhead">Introduction!</h1>
       <div className="intro">
       <img src="otherImages/introImg.png" className='introImg' alt="Web Development" />
       <p className='introPara'>Welcome to our beginner-friendly guide to web development! Whether you're just starting your journey into the world of coding or looking to expand your skills, this website is designed to be your go-to resource. From understanding the basics of HTML, CSS, and JavaScript to exploring advanced frameworks and tools, we're here to provide you with clear explanations, practical examples, and step-by-step tutorials. Our goal is to empower you to create stunning websites and web applications, equipping you with the knowledge and tools you need to succeed in the dynamic field of web development. Let's dive in and start building together!</p>
       </div>
+      <h1 className="bookhead">Step-wise topics</h1>
       <div className="list">
         {desc}
       </div>
