@@ -110,7 +110,7 @@ const Step = () => {
   const documentation = docs[id - 1].map((item, index) => {
     return (
       <div key={index}>
-        <Link to={item} className="document">&#10239; Click me to get the documentation for {title[id-1][index]}</Link>
+        <a target="_blank" href={item} className="document">&#10239; Click me to get the documentation for {title[id-1][index]}</a>
       </div>
     );
   });
