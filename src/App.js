@@ -5,6 +5,7 @@ import Step from "./Components/Step";
 import Demo from "./Components/Demo";
 import Donate from "./Components/Donate";
 import Success from "./Components/Success";
+import Booksuccess from "./Components/Booksuccess";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/step/:id" element={<Step />}></Route>
           <Route exact path="/demo" element={<Demo />}></Route>
           <Route exact path="/donate" element={<Donate />}></Route>
+          <Route exact path="/bookresult/:check" element={<Booksuccess/>}></Route>
           <Route path="/paymentsuccess/:text" element={<Success />}></Route>
         </Routes>
       </Router>

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Demo = () => {
   const BACKEND_URL = "https://webify-backend-hnli.onrender.com";
+  const navigate = useNavigate();
   const [nam, setNam] = useState("");
   const [phone, setPhone] = useState("");
   const changeHandler = (e) => {
@@ -21,16 +23,21 @@ const Demo = () => {
   useEffect(() => {
     console.log(phone);
   }, [phone]);
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;
     const phone = event.target.phone.value;
-    axios.post(`${BACKEND_URL}/demo`, {
+    await axios.post(`${BACKEND_URL}/demo`, {
       name, phone
     }) 
     .then((response) => {
       event.target.reset();
-      console.log(response);
+      if(response.data.success===true){
+        navigate('/bookresult/1');
+      }
+      else{
+        navigate('/bookresult/0');
+      }
     })
     .catch((error) => {
       console.log(error);
