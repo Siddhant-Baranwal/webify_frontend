@@ -191,3 +191,22 @@ body{
   border-top-right-radius: 5vw;
   border-bottom-right-radius: 5vw;
 }
+
+#parallax{
+  width: 95vw;
+  height: 30vw;
+  background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
+}
+
+#parallax h1{
+  text-align: center;
+  padding: 11vw;
+  font-size: 5vw;
+  font-family: cursive;
+  opacity: 0.5;
+  letter-spacing: 0.5vw;
+  font-weight: bold;
+}

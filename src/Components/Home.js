@@ -1,8 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 
 const Home = () => {
+  useEffect(() => {
+    const parallax = (e) => {
+      let _w = window.innerWidth / 2;
+      let _h = window.innerHeight / 2;
+      let _mouseX = e.clientX;
+      let _mouseY = e.clientY;
+      let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+      let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
+      let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
+      let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+      const elem = document.getElementById("parallax");
+      if (elem) {
+        elem.style.backgroundPosition = x;
+      }
+    };
+    document.addEventListener("mousemove", parallax);
+    
+    // Cleanup function to remove the event listener
+    return () => {
+      document.removeEventListener("mousemove", parallax);
+    };
+  }, []);
+  
   const description = [
     'HTML structures web pages, CSS styles them, controlling layout and appearance. JavaScript adds interactivity, dynamic content, and enhances user experience with animations and form validation. Together, HTML, CSS, and JavaScript form the core technologies for building modern, interactive, and visually appealing websites.',
     'Git, a version control system, tracks code changes in software development, facilitating collaboration and history tracking. GitHub, a web-based platform, hosts Git repositories, offering collaboration tools like issue tracking and pull requests. It centralizes open-source projects, fostering a global developer community for sharing and contributing to code.',
@@ -36,6 +59,8 @@ const Home = () => {
   return (
     <div>
       <Navbar title = "Learn full-stack web development"/>
+      <div id="parallax"><h1>Webify</h1></div>
+      <h1 className="bookhead">Getting started!</h1>
       <div className="intro">
       <img src="otherImages/introImg.png" className='introImg' alt="Web Development" />
       <p className='introPara'>Welcome to our beginner-friendly guide to web development! Whether you're just starting your journey into the world of coding or looking to expand your skills, this website is designed to be your go-to resource. From understanding the basics of HTML, CSS, and JavaScript to exploring advanced frameworks and tools, we're here to provide you with clear explanations, practical examples, and step-by-step tutorials. Our goal is to empower you to create stunning websites and web applications, equipping you with the knowledge and tools you need to succeed in the dynamic field of web development. Let's dive in and start building together!</p>
