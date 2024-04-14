@@ -11,7 +11,8 @@ const Navbar = (props) => {
         <Link className="pages" to='/demo'>Booking</Link>
       </span>
     </div>
-      <h1 className='bookhead' >{props.title}</h1>
+      {!props.hide && <h1 className=' new bookhead' >{props.title}</h1>}
+      {props.hide && <h1 className='bookhead' >{props.title}</h1>}
     </div>
   )
 }

@@ -59,7 +59,7 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar title = "Learn full-stack web development"/>
+      <Navbar title = "Learn full-stack web development" hide="true"/>
       <div id="parallax"><h1>Webify</h1></div>
       <h1 className="bookhead">Introduction!</h1>
       <div className="intro">

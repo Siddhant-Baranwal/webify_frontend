@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Step = () => {
@@ -110,7 +110,7 @@ const Step = () => {
   const documentation = docs[id - 1].map((item, index) => {
     return (
       <div key={index}>
-        <a target="_blank" href={item} className="document">&#10239; Click me to get the documentation for {title[id-1][index]}</a>
+        <a target="_blank" rel="noreferrer" href={item} className="document">&#10239; Click me to get the documentation for {title[id-1][index]}</a>
       </div>
     );
   });
@@ -152,7 +152,7 @@ const Step = () => {
 
   return (
     <div className="step">
-      <Navbar title={head[id-1]}/>
+      <Navbar title={head[id-1]} hide="true"/>
       <ul className="steplist">{introduction}</ul>
       <h1 className="learnlist subtitle">Learn from here: </h1>
       <div className="youtube">{youTubeVideo}</div>
