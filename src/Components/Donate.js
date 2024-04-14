@@ -48,6 +48,7 @@ const Donate = () => {
     .catch(error => {
       navigate('/result/0');
     })
+    navigate('/result/0');
   }
   return (
     <div>
