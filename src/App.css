@@ -223,7 +223,7 @@ body {
   text-align: center;
   padding: 11vw;
   font-size: 5vw;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   opacity: 0.7;
   letter-spacing: 0.5vw;
   font-weight: bold;
@@ -293,6 +293,18 @@ body {
   color: #66fcf1;
 }
 
+.blob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+}
+
+.blob img {
+  bottom: 10vw;
+  width: 500px;
+}
+
 .up {
   position: fixed;
   bottom: 3vw;
@@ -321,7 +333,7 @@ body {
   color: grey;
 }
 
-.loader{
+.loader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -329,7 +341,7 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-  *{
+  * {
     margin-right: 0 !important;
   }
   .intro {
@@ -344,6 +356,18 @@ body {
     width: 500px;
     filter: invert(100%);
     display: none;
+  }
+
+  .blob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vw;
+  }
+
+  .blob img {
+    bottom: 10vw;
+    width: 300px;
   }
 
   .intro p {
@@ -379,7 +403,7 @@ body {
     font-size: 3.5vw;
     padding: 0.5vw;
     transition: 0.5s;
-}
+  }
 
   .intro p:hover::after {
     visibility: hidden;
@@ -390,136 +414,135 @@ body {
     margin: 0 2vw 1vw 2vw;
   }
   .step h1,
-.bookhead {
-  text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  padding: 0.5vw;
-  margin: 2vw 1vw 1vw 1vw;
-  border-bottom: 0.2vw solid #66fcf1;
-  transition: 0.5s;
-  font-size: 5vw;
-}
+  .bookhead {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding: 0.5vw;
+    margin: 2vw 1vw 1vw 1vw;
+    border-bottom: 0.2vw solid #66fcf1;
+    transition: 0.5s;
+    font-size: 5vw;
+  }
 
-.new{
-  margin-top: 15vw !important;
-}
+  .new {
+    margin-top: 15vw !important;
+  }
 
-.pages {
-  font-size: 4vw;
-  padding: 1vw;
-  width: 20vw;
-  text-align: center;
-  align-items: center;
-  background-image: linear-gradient(
-    to right,
-    rgba(102, 252, 241, 0),
-    rgba(102, 252, 241, 0)
-  );
-  transition: 1s;
-  font-weight: bold;
-}
+  .pages {
+    font-size: 4vw;
+    padding: 1vw;
+    width: 20vw;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient(
+      to right,
+      rgba(102, 252, 241, 0),
+      rgba(102, 252, 241, 0)
+    );
+    transition: 1s;
+    font-weight: bold;
+  }
 
-.list{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-}
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-.item {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1vw;
-  height: 90vw;
-  overflow:auto;
-  background-color: #1f2833;
-  justify-content: center;
-  align-items: center;
-  margin: 2vw;
-  color: transparent;
-}
+  .item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1vw;
+    height: 90vw;
+    overflow: auto;
+    background-color: #1f2833;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+    color: transparent;
+  }
 
-.steplist li {
-  padding: 3vw;
-  padding-right: 4vw;
-  margin-bottom: 0.5vw;
-  font-size: 3vw;
-}
+  .steplist li {
+    padding: 3vw;
+    padding-right: 4vw;
+    margin-bottom: 0.5vw;
+    font-size: 3vw;
+  }
 
-.item img {
-  width: 40vw;
-  height: 20vw;
-  margin: 1vw;
-}
+  .item img {
+    width: 40vw;
+    height: 20vw;
+    margin: 1vw;
+  }
 
-.item div {
-  display: inline-block;
-  margin: 0 2vw;
-  width: 40vw;
-  text-decoration: none;
-  font-size: 3vw;
-  text-align: center;
-  padding: 4vw 0vw 0vw 0vw;
-  color: #66fcf1;
-}
+  .item div {
+    display: inline-block;
+    margin: 0 2vw;
+    width: 40vw;
+    text-decoration: none;
+    font-size: 3vw;
+    text-align: center;
+    padding: 4vw 0vw 0vw 0vw;
+    color: #66fcf1;
+  }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  height: 24vw;
-  width: 80vw;
-  margin: 6vw 10vw;
-  padding: 2vw;
-}
+  .form {
+    display: flex;
+    flex-direction: column;
+    height: 24vw;
+    width: 80vw;
+    margin: 6vw 10vw;
+    padding: 2vw;
+  }
 
-.form button{
-  margin: 10vw 15vw;
-  font-size: 4vw;
-  width: 40vw;
-  padding: 1.5vw;
-}
+  .form button {
+    margin: 10vw 15vw;
+    font-size: 4vw;
+    width: 40vw;
+    padding: 1.5vw;
+  }
 
-.demoTitle{
-  font-size: 4vw;
-  width: 80vw;
-  padding: 1.5vw;
-  margin: 5vw 10vw;
-}
+  .demoTitle {
+    font-size: 4vw;
+    width: 80vw;
+    padding: 1.5vw;
+    margin: 5vw 10vw;
+  }
 
-.form div {
-  margin: 5vw 1vw;
-}
+  .form div {
+    margin: 5vw 1vw;
+  }
 
-.form div span {
-  width: 20vw;
-  font-size: 3vw;
-}
+  .form div span {
+    width: 20vw;
+    font-size: 3vw;
+  }
 
-.form div input {
-  font-size: 3vw;
-  width: 50vw;
-}
+  .form div input {
+    font-size: 3vw;
+    width: 50vw;
+  }
 
-.payhead {
-  width: 100vw;
-  height: 15vw;
-  margin: 20vw 0vw;
-  font-size: 5vw;
-  color: white;
-  padding: 5vw 0vw;
-  text-align: center;
-  background-color: rgb(83, 200, 83);
-}
+  .payhead {
+    width: 100vw;
+    height: 15vw;
+    margin: 20vw 0vw;
+    font-size: 5vw;
+    color: white;
+    padding: 5vw 0vw;
+    text-align: center;
+    background-color: rgb(83, 200, 83);
+  }
 
-.up {
-  position: fixed;
-  bottom: 8vw;
-  right: 8vw;
-  padding: 1vw 4vw;
-  background-color: #1f2833;
-  color: #66fcf1;
-  text-decoration: none;
-  transition: 0.5s;
-  font-size: 8vw;
-  border-radius: 1vw;
-}
-
+  .up {
+    position: fixed;
+    bottom: 8vw;
+    right: 8vw;
+    padding: 1vw 4vw;
+    background-color: #1f2833;
+    color: #66fcf1;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 8vw;
+    border-radius: 1vw;
+  }
 }
