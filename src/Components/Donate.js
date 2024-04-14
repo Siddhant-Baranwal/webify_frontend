@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Blob from './Blob';
 
 const Donate = () => {
   const BACKEND_URL = "https://webify-backend-hnli.onrender.com";
@@ -64,6 +65,7 @@ const Donate = () => {
         </div>
         <button type="submit">Donate</button>
       </form>
+      <Blob/>
     </div>
   )
 }

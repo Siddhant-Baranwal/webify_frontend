@@ -67,7 +67,6 @@ body {
   padding: 3vw 0vw;
   text-align: center;
   border-radius: 1vw;
-  background-color: rgb(83, 200, 83);
 }
 
 .form {
@@ -208,6 +207,14 @@ body {
   border-bottom-right-radius: 5vw;
 }
 
+.bg img{
+  width: 50vw;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  opacity: 0.1;
+}
+
 #parallax {
   width: 95vw;
   height: 30vw;
@@ -340,6 +347,12 @@ body {
   height: 200px;
 }
 
+.bg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (max-width: 800px) {
   * {
     margin-right: 0 !important;
@@ -350,6 +363,14 @@ body {
     height: 70vw;
     justify-content: center;
     align-items: center;
+  }
+
+  .bg img{
+    width: 400px;
+    position: absolute;
+    z-index: -1;
+    top: 20vw;
+    opacity: 0.1;
   }
 
   .intro img {
@@ -527,10 +548,8 @@ body {
     height: 15vw;
     margin: 20vw 0vw;
     font-size: 5vw;
-    color: white;
     padding: 5vw 0vw;
     text-align: center;
-    background-color: rgb(83, 200, 83);
   }
 
   .up {

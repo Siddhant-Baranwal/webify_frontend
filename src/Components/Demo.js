@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Blob from './Blob';
 
 const Demo = () => {
   const [load, setLoad] = useState(false);
@@ -56,8 +57,9 @@ const Demo = () => {
       </form>
     </div>}
     {load && <div className='loader'>
-    <img src="otherImages/loading.gif" alt="Loading..." />
+    <img src="/otherImages/loading.gif" alt="Loading..." />
     </div>}
+    <Blob/>
     </>
   )
 }
