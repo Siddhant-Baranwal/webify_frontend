@@ -236,8 +236,8 @@ body {
 
 .intro p {
   font-size: 1.5vw;
-  margin: 1vw 2vw 0 0;
-  height: 15vw;
+  margin: 7vw 2vw 0 0;
+  height: 2vw;
   transition: 2s;
   overflow: hidden;
 }
