@@ -234,10 +234,6 @@ body {
   flex-direction: row;
 }
 
-.intro img {
-  display: none;
-}
-
 .intro p {
   font-size: 1.5vw;
   margin: 1vw 2vw 0 0;
@@ -340,6 +336,7 @@ body {
   .intro img {
     width: 500px;
     filter: invert(100%);
+    display: none;
   }
 
   .intro p {
