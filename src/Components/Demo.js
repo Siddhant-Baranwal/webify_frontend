@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -16,13 +16,6 @@ const Demo = () => {
       setPhone(value);
     }
   };
-  useEffect(() => {
-    console.log(nam);
-  }, [nam]);
-
-  useEffect(() => {
-    console.log(phone);
-  }, [phone]);
   const submitHandler = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;

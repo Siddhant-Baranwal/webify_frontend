@@ -223,7 +223,7 @@ body {
   text-align: center;
   padding: 11vw;
   font-size: 5vw;
-  font-family: cursive;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   opacity: 0.7;
   letter-spacing: 0.5vw;
   font-weight: bold;
@@ -232,19 +232,16 @@ body {
 .intro {
   display: flex;
   flex-direction: row;
-  height: 16vw;
 }
 
 .intro img {
-  width: 30vw;
-  padding: 0;
-  filter: invert(100%);
+  display: none;
 }
 
 .intro p {
   font-size: 1.5vw;
-  margin: 7vw 2vw 0 0;
-  height: 1.75vw;
+  margin: 1vw 2vw 0 0;
+  height: 15vw;
   transition: 2s;
   overflow: hidden;
 }
@@ -329,6 +326,9 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
+  *{
+    margin-right: 0 !important;
+  }
   .intro {
     display: flex;
     flex-direction: column;
@@ -359,6 +359,23 @@ body {
     right: 2vw;
     visibility: hidden;
   }
+
+  .steplist {
+    display: inline-block;
+    width: 95vw;
+    text-align: left;
+    margin: 1vw 2vw 1vw 1vw;
+  }
+
+  .step .document {
+    text-decoration: none;
+    display: block;
+    width: 85vw;
+    margin-left: 5vw;
+    font-size: 3.5vw;
+    padding: 0.5vw;
+    transition: 0.5s;
+}
 
   .intro p:hover::after {
     visibility: hidden;
@@ -407,13 +424,20 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 1vw;
-  height: 80vw;
+  height: 90vw;
   overflow:auto;
   background-color: #1f2833;
   justify-content: center;
   align-items: center;
   margin: 2vw;
   color: transparent;
+}
+
+.steplist li {
+  padding: 3vw;
+  padding-right: 4vw;
+  margin-bottom: 0.5vw;
+  font-size: 3vw;
 }
 
 .item img {
@@ -451,9 +475,9 @@ body {
 
 .demoTitle{
   font-size: 4vw;
-  width: 60vw;
+  width: 80vw;
   padding: 1.5vw;
-  margin: 5vw 18vw;
+  margin: 5vw 10vw;
 }
 
 .form div {
@@ -470,7 +494,6 @@ body {
   width: 50vw;
 }
 
-
 .payhead {
   width: 100vw;
   height: 15vw;
@@ -480,6 +503,19 @@ body {
   padding: 5vw 0vw;
   text-align: center;
   background-color: rgb(83, 200, 83);
+}
+
+.up {
+  position: fixed;
+  bottom: 8vw;
+  right: 8vw;
+  padding: 1vw 4vw;
+  background-color: #1f2833;
+  color: #66fcf1;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 8vw;
+  border-radius: 1vw;
 }
 
 }
