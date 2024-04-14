@@ -321,6 +321,13 @@ body {
   color: grey;
 }
 
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
 @media only screen and (max-width: 800px) {
   *{
     margin-right: 0 !important;

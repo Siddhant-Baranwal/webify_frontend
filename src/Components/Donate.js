@@ -1,9 +1,11 @@
 import React from 'react';
 import Navbar from './Navbar';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Donate = () => {
   const BACKEND_URL = "https://webify-backend-hnli.onrender.com";
+  const navigate = useNavigate();
   const checkoutHandler = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -14,8 +16,7 @@ const Donate = () => {
       key = response.data.key;
     })
     .catch(error => {
-      // Error handling
-      console.error('Error occurred: ', error);
+      navigate('/result/0');
     });
     await axios.post(`${BACKEND_URL}/checkout`, { amount })
     .then(response => {
@@ -45,8 +46,7 @@ const Donate = () => {
       razor.open();
     })
     .catch(error => {
-      // Error handling 
-      console.error('Error occurred: ', error);
+      navigate('/result/0');
     })
   }
   return (

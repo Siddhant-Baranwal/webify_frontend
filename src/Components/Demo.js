@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const Demo = () => {
+  const [load, setLoad] = useState(false);
   const BACKEND_URL = "https://webify-backend-hnli.onrender.com";
   const navigate = useNavigate();
   const [nam, setNam] = useState("");
@@ -20,26 +21,28 @@ const Demo = () => {
     event.preventDefault();
     const name = event.target.name.value;
     const phone = event.target.phone.value;
+    setLoad(true);
     await axios.post(`${BACKEND_URL}/demo`, {
       name, phone
     }) 
     .then((response) => {
       event.target.reset();
       if(response.data.success===true){
-        navigate('/bookresult/1');
+        navigate('/result/1');
       }
       else{
-        navigate('/bookresult/0');
+        navigate('/result/0');
       }
     })
     .catch((error) => {
-      console.log(error);
+      navigate('/result/0');
     })
+    setLoad(false);
   }
   return (
     <>
     <Navbar title = "Book a free counselling session now!"/>
-    <div>
+    {!load && <div>
       <form className='form' onSubmit={submitHandler}>
         <div>
         <span>Name: </span>
@@ -51,7 +54,10 @@ const Demo = () => {
         </div>
         <button type="submit" disabled={nam.length===0 || phone.length!==10}>Submit</button>
       </form>
-    </div>
+    </div>}
+    {load && <div className='loader'>
+    <img src="otherImages/loading.gif" alt="Loading..." />
+    </div>}
     </>
   )
 }

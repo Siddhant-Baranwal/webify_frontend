@@ -4,8 +4,6 @@ import { useParams } from 'react-router-dom'
 
 const Booksuccess = () => {
   let {check} = useParams();
-  console.log(check)
-  console.log(typeof check)
   return (
     <div>
 
