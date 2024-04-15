@@ -42,7 +42,7 @@ const Demo = () => {
   }
   return (
     <>
-    <Navbar title = "Book a free counselling session now!"/>
+    {!load && <Navbar title = "Book a free counselling session now!"/>}
     {!load && <div>
       <form className='form' onSubmit={submitHandler}>
         <div>
@@ -59,7 +59,7 @@ const Demo = () => {
     {load && <div className='loader'>
     <img src="/otherImages/loading.gif" alt="Loading..." />
     </div>}
-    <Blob/>
+    {!load && <Blob/>}
     </>
   )
 }

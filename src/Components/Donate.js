@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Blob from './Blob';
 
 const Donate = () => {
+  const [load, setLoad] = useState(false);
   const BACKEND_URL = "https://webify-backend-hnli.onrender.com";
   const navigate = useNavigate();
   const checkoutHandler = async (e) => {
@@ -49,11 +50,12 @@ const Donate = () => {
     .catch(error => {
       navigate('/result/0');
     })
+    setLoad(true);
   }
   return (
     <div>
-      <Navbar title = "Donate and help us grow faster!"/>
-      <form className='form' onSubmit={checkoutHandler}>
+      {!load && <Navbar title = "Donate and help us grow faster!"/>}
+      {!load && <form className='form' onSubmit={checkoutHandler}>
         <div>
         <span>Name: </span>
         <input type="text" name="name" id="name" />
@@ -63,8 +65,11 @@ const Donate = () => {
         <input type="number" name="amount" id="amount" />
         </div>
         <button type="submit">Donate</button>
-      </form>
-      <Blob/>
+      </form>}
+      {load && <div className='loader'>
+        <img src="/otherImages/loading.gif" alt="Loading..." />
+      </div>}
+      {!load && <Blob/>}
     </div>
   )
 }
